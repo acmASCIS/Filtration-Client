@@ -1,0 +1,18 @@
+nav {
+    background-color: #c7e4f6;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    align-items: center;
+    height: 9rem;
+}
+nav img {
+    width: 100px;
+}
+
+
+.header {
+    color: #000;
+}

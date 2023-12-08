@@ -46,5 +46,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.5"
-  }
+  },
+  
+  "author": "Islam Alsaadawy (Islamalsaadawy12@gmail.com)",
+  "license": "MIT"
 }

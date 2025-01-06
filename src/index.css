@@ -16,10 +16,14 @@ code {
     monospace;
 }
 .light-blue-stroke {
-  stroke: rgb(30, 133, 198); 
+  stroke: rgb(30, 133, 198);
 }
 
 .blue-stroke {
-  stroke: rgb(12, 112, 174); 
+  stroke: rgb(12, 112, 174);
 }
 
+
+.header {
+  margin-right: 20px
+}

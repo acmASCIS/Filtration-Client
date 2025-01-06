@@ -61,15 +61,15 @@ const ProblemForms: React.FC<ProblemFormsProps> = ({ contests }) => {
 
         try {
             setIsLoading(true);
-            const response = await axios.post('http://localhost:3000/filter', payload);    
+            const response = await axios.post('http://localhost:4000/filter', payload);
             setIsLoading(false);
-            setUserPoints(response.data); 
+            setUserPoints(response.data);
         } catch (error) {
             setContestError(true);
             setIsLoading(false);
             return;
         }
-    
+
     }
 };
 
@@ -92,9 +92,9 @@ const ProblemForms: React.FC<ProblemFormsProps> = ({ contests }) => {
         for (let i = 0; i < parseInt(contests[currentContest].numProblems); i++) {
             inputs.push(
                 <div key={i}>
-                    <RoundedInput 
-                        placeholder={`${String.fromCharCode(65 + i)} Points`} 
-                        value={problemPoints[currentContest][i] || ''} 
+                    <RoundedInput
+                        placeholder={`${String.fromCharCode(65 + i)} Points`}
+                        value={problemPoints[currentContest][i] || ''}
                         onChange={(e) => handlePointsChange(i, e.target.value)}
                     />
                     {errors[i] && <ErrorMessage message={errors[i]} />}
@@ -127,11 +127,11 @@ const ProblemForms: React.FC<ProblemFormsProps> = ({ contests }) => {
             )}
             <div>
                 {contestError && <ErrorComponent errorMessage="Contest not found or you have no access" />}
-                
+
             </div>
         </div>
     );
-    
+
 };
 
 export default ProblemForms;
